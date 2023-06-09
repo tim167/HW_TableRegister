@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма реєстрації</title>
+    <script src="Task1.js" defer></script>
+    <link rel="stylesheet" href="Task1.css">
+  </head>
+<body>
+  <h1>Форма реєстрації</h1>
+
+  <form id="registration-form">
+    <label for="first-name">Ім'я:</label>
+    <input type="text" id="first-name" required>
+
+    <label for="last-name">Прізвище:</label>
+    <input type="text" id="last-name" required>
+
+    <label for="birthdate">Дата народження (дд.мм.рррр):</label>
+    <input type="text" id="birthdate" pattern="\d{2}\.\d{2}\.\d{4}" placeholder="наприклад, 01.01.2000" required>
+
+    <div class="radio-group">
+      <label>Стать:</label>
+      <input type="radio" id="gender-male" name="gender" value="male">
+      <label for="gender-male">Чоловіча</label>
+      <input type="radio" id="gender-female" name="gender" value="female">
+      <label for="gender-female">Жіноча</label>
+    </div>
+
+    <label for="city">Місто:</label>
+    <select id="city">
+      <option value="kyiv">Київ</option>
+      <option value="lviv">Львів</option>
+      <option value="odessa">Одеса</option>
+    </select>
+
+    <label for="address">Адреса:</label>
+    <textarea id="address" rows="4" cols="50"></textarea>
+
+    <div class="checkbox-group">
+      <label>Мови, якими володієте:</label>
+      <input type="checkbox" id="language-english" value="english">
+      <label for="language-english">Англійська</label>
+      <input type="checkbox" id="language-ukrainian" value="ukrainian">
+      <label for="language-ukrainian">Українська</label>
+      <input type="checkbox" id="language-germany" value="german">
+      <label for="language-germany">Німецька</label>
+    </div>
+
+    <button type="submit" id="save-button">Зберегти</button>
+  </form>
+
+  <div id="table-container"></div>
+
+</body>
+</html>
